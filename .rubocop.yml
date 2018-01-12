@@ -1,0 +1,71 @@
+---
+AllCops:
+  Exclude:
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'Vagrantfile'
+    - 'Policyfile*.rb'
+    - 'Berksfile'
+    - 'Thorfile'
+    - 'Gemfile'
+    - 'metadata.rb'
+    - 'test/**/*'
+    - 'spec/**/*'
+    - 'bin/**'
+    - 'vendor/**/*'
+Layout/LineLength:
+  Enabled: false
+Layout/ParameterAlignment:
+  Enabled: false
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/Encoding:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Naming/FileName:
+  Enabled: false
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/ModuleFunction:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/RescueStandardError:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Metrics/BlockLength:
+  Max: 80
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
