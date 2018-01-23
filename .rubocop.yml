@@ -30,6 +30,8 @@ MethodLength:
   Enabled: false
 Metrics/AbcSize:
   Enabled: false
+Metrics/BlockLength:
+  Enabled: false
 PerceivedComplexity:
   Enabled: false
 Style/SpaceBeforeFirstArg:
