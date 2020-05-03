@@ -30,7 +30,11 @@ Ohai.plugin(:Triton) do
     triton[:uuid] = shell_out("#{mdata_get} sdc:uuid").stdout.strip
     triton[:image_uuid] = shell_out("#{mdata_get} sdc:image_uuid").stdout.strip
     triton[:owner_uuid] = shell_out("#{mdata_get} sdc:owner_uuid").stdout.strip
-    triton[:server_uuid] = shell_out("#{mdata_get} sdc:owner_uuid").stdout.strip
+    triton[:server_uuid] = shell_out("#{mdata_get} sdc:server_uuid").stdout.strip
+    # Create an array of the CNS names for this instance.
+    cns = shell_out("#{mdata_get} sdc:tags.triton.cns.services")
+    triton[:cns_services] = cns.stdout.strip.split(',') unless cns.stdout.empty?
+    
     # Process user-defined instance metadata
     shell_out(mdata_list.to_s).stdout.each_line do |key|
       mdata = key.strip
